@@ -1,36 +1,25 @@
 {
   "name": "@creativecretin/hushtags-web-router",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The router for the HushTags web client written in GoLang.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "go-npm install",
+    "preuninstall": "go-npm uninstall"
+  },
+  "goBinary": {
+    "name": "hushtags-router-go",
+    "path": ".",
+    "url": "https://github.com/creativecretin/hushtags-router-go/releases/download/v{{version}}/hushtags-router-go_{{version}}_{{platform}}_{{arch}}.tar.gz"
+  },
   "keywords": [
     "hushtags",
     "web",
     "router",
     "golang"
   ],
-  "homepage": "https://github.com/creativecretin/hushtags-router-go#readme",
-  "bugs": {
-    "url": "https://github.com/creativecretin/hushtags-router-go/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativecretin/hushtags-router-go.git"
-  },
-  "license": "ISC",
-  "author": "Creative Cretin",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "cpt.cretin <cpt@cretin.co> (https://cretin.co/)",
   "dependencies": {
-    "go-npm": "^0.1.9"
-  },
-  "postinstall": "go-npm install",
-  "preuninstall": "go-npm uninstall",
-  "goBinary": {
-      "name": "hushtags-web-router",
-      "path": "./bin",
-      "url": "https://github.com/creativecretin/hushtags-router-go/releases/download/v{{version}}/hushtags-router-go_{{version}}_{{platform}}_{{arch}}.tar.gz"
+    "@creativecretin/go-npm": "^0.2.2"
   }
 }
